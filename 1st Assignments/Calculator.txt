@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace calculator
+{
+    class program
+    {
+        public static void Main(string[] args)
+        {
+            int num1;
+            int num2;
+            string operand;
+            float answar;
+            Console.Write("please enter the first integer: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("please enter the second integer: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("please enter an operand(+, -, /, *): ");
+            operand = Console.ReadLine();
+            switch (operand)
+            {
+                case "-":
+                    answar = num1 - num2;
+                    break;
+                case "+":
+                    answar = num1 + num2;
+                    break;
+                case "/":
+                    answar = num1 / num2;
+                    break;
+                case "*":
+                    answar = num1 * num2;
+                    break;
+                default:
+                    answar = 0;
+                    break;
+            }
+            Console.WriteLine(num1.ToString() + " " + operand + " " + num2.ToString() + " = " + answar.ToString());
+            Console.ReadLine();
+        }
+    }
+}
